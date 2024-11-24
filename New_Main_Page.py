@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from PIL import Image
 
-def local_css(file_name=r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\style.css"):
+def local_css(file_name=r"style.css"):
     """Injects custom CSS into the Streamlit app."""
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
@@ -35,12 +35,12 @@ def encode_image(image_path):
 
 # Dictionary to store background images for each page
 background_images = {
-    'home': r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png",  # Specify the image for the home page
-    'aerospace_quiz': r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png",  # Add other page-specific images here
-    'defence_quiz': r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png",
-    'cybersecurity_quiz': r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png",
-    'transportation_quiz': r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png",
-    'space_quiz': r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png"
+    'home': r"Quiz_Bg.png",  # Specify the image for the home page
+    'aerospace_quiz': r"Quiz_Bg.png",  # Add other page-specific images here
+    'defence_quiz': r"Quiz_Bg.png",
+    'cybersecurity_quiz': r"Quiz_Bg.png",
+    'transportation_quiz': r"Quiz_Bg.png",
+    'space_quiz': r"Quiz_Bg.png"
 }
 
 # Set session state for page navigation
@@ -63,7 +63,7 @@ def load_quiz_page(quiz_file_path):
 # Main app code
 def main():
     # Load the CSS file
-    local_css(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\style.css")  # Ensure that you have a valid CSS file
+    local_css(r"style.css")  # Ensure that you have a valid CSS file
 
     # Home page
     if st.session_state.page == 'home':
@@ -142,11 +142,11 @@ def main():
         st.markdown('<div class="department-container">', unsafe_allow_html=True)
 
         departments = {
-            "Aviation": ("aerospace_quiz", r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\aerospace_image.jpg"),
-            "Defence": ("defence_quiz", r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\defence_image.jpg"),
-            "Cybersecurity": ("cybersecurity_quiz", r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\cybersecurity_image.jpeg"),
-            "Transportation": ("transportation_quiz", r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\transportation_image.jpeg"),
-            "Space": ("space_quiz", r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\space_image.jpg"),
+            "Aviation": ("aerospace_quiz", r"aerospace_image.jpg"),
+            "Defence": ("defence_quiz", r"defence_image.jpg"),
+            "Cybersecurity": ("cybersecurity_quiz", r"cybersecurity_image.jpeg"),
+            "Transportation": ("transportation_quiz", r"transportation_image.jpeg"),
+            "Space": ("space_quiz", r"space_image.jpg"),
         }
 
         # Create department cards with Streamlit buttons inside
@@ -177,15 +177,15 @@ def main():
 
     # Redirect to department quiz pages
     elif st.session_state.page == "aerospace_quiz":
-        load_quiz_page(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Aviation_Quiz.py")
+        load_quiz_page(r"Aviation_Quiz.py")
     elif st.session_state.page == "defence_quiz":
-        load_quiz_page(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Defence_Quiz.py")
+        load_quiz_page(r"Defence_Quiz.py")
     elif st.session_state.page == "cybersecurity_quiz":
-        load_quiz_page(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Cybersecurity_Quiz.py")
+        load_quiz_page(r"Cybersecurity_Quiz.py")
     elif st.session_state.page == "transportation_quiz":
-        load_quiz_page(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Transportation_Quiz.py")
+        load_quiz_page(r"Transportation_Quiz.py")
     elif st.session_state.page == "space_quiz":
-        load_quiz_page(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Space_Quiz.py")
+        load_quiz_page(r"Space_Quiz.py")
         
     
 
