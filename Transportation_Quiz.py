@@ -201,7 +201,7 @@ def main():
 
     # Apply custom styles and background
     add_custom_styles()
-    set_background_image(get_base64_of_bin_file(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Quiz_Bg.png"))
+    set_background_image(get_base64_of_bin_file(r"Quiz_Bg.png"))
 
     # Initialize session state
     if 'quiz_started' not in st.session_state:
