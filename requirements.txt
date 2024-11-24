@@ -1,0 +1,13 @@
+streamlit
+pandas
+numpy
+matplotlib
+pillow
+altair
+scikit-learn
+tensorflow
+vega-datasets
+scipy
+google-generativeai
+google-cloud
+google-auth
