@@ -9,11 +9,11 @@ from scipy.interpolate import make_interp_spline
 import matplotlib.pyplot as plt
 
 def load_data():
-    employee_df = pd.read_csv(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Employee_Behaviour.csv")
+    employee_df = pd.read_csv(r"Employee_Behaviour.csv")
     return employee_df
 
 def load_autoencoder_model():
-    autoencoder = load_model(r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\autoencoder_model.keras")
+    autoencoder = load_model(r"autoencoder_model.keras")
     return autoencoder
 
 def validate_employee_behavior(employee_id, employee_df, autoencoder):
