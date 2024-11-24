@@ -177,7 +177,7 @@ with col2:
 # Conditional rendering based on selected app
 if st.session_state.app == 'threat_detection':
     # Load the Threat Detection page using the file path you provided
-    page_path = r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\Employee App.py"
+    page_path = r"Employee App.py"
     if os.path.exists(page_path):
         with open(page_path, 'r', encoding='utf-8') as f:
             exec(f.read())
@@ -186,7 +186,7 @@ if st.session_state.app == 'threat_detection':
 
 elif st.session_state.app == 'security_training':
     # Load the Security Training page using the file path you provided
-    page_path = r"C:\Users\Nitya\Downloads\ThalesGentech\ThalesGentech\New_Main_Page.py"
+    page_path = r"New_Main_Page.py"
     if os.path.exists(page_path):
         with open(page_path, 'r', encoding='utf-8') as f:
             exec(f.read())
